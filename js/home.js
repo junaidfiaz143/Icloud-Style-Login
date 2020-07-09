@@ -1,4 +1,4 @@
-function log_in(arg){
+function logIn(){
 	var password =  document.getElementById("txt_password").value
 	var username =  document.getElementById("txt_username").value
 
@@ -24,5 +24,11 @@ function log_in(arg){
 	if (user_auth==true && pass_auth==true){
 		document.getElementById("login_form").className = "animate_form";
 		document.getElementById("layer_login").className = "animate_layer";
+	}
+}
+
+function enterLogin(e) {
+	if (e.keyCode == 13) {
+		logIn()
 	}
 }
